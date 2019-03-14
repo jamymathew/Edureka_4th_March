@@ -1,0 +1,57 @@
+IFrame VS Frame
+================================================================
+
+IFrame
+-----------
+Iframe is an inline frame and it is also used as <iframe> tag in HTML.
+
+Inline frame means it is used to embed some other document within the current HTML document.
+
+3.It is related to frameset but it can appear anywhere in your document.
+
+4.<iframe> tag defines a rectangular region within the document in which the browser can display a separate document.
+
+5.IFrame object represents an HTML inline frame.
+
+Example
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Iframes</title>
+</head>
+<body>
+<p>See the video</p>
+ <iframe width="854" height="480" src="https://www.youtube.com/embed/2eabXBvw4oI"
+    frameborder="0"    allowfullscreen>
+  </iframe>
+</body>
+</html>
+
+===========================================================================
+
+Frame
+-----------
+Frames are HTML tag which divides the browser's window into multiple parts where each part can load a separate HTML document.
+
+<frame> tag specifies each frame within a frameset tag.
+
+A collection of frames in the browser window is known as a frameset.
+
+Each Frame can be linked with a single and different sources.
+
+Frame object represents an HTML frame
+
+Example
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Frames</title>
+</head>
+<frameset rows="20%,70%,10%">
+   <frame name="top" src="/html/top.html" />
+   <frame name="main" src="/html/main.html" />
+   <frame name="bottom" src="/html/bottom.html" />
+</frameset>
+</html>

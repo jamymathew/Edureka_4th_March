@@ -1,0 +1,43 @@
+Why WebDriver driver = new ChromeDriver();
+
+===========================================================================================================================
+Hello Friends! while doing UI automation using Selenium WebDriver, the very first line of code that we see to launch a browser is-
+
+WebDriver driver = new FirefoxDriver();
+
+Depending on the type of browser we want to launch the browser specific driver changes to ChromeDriver(), InternetExplorerDriver() etc. But have you ever noticed that why do we need to create a reference variable of type WebDriver? What if we directly instantiate the browser specific driver like-
+
+FirefoxDriver driver = new FirefoxDriver();
+
+Is the above line of code incorrect? If not than what's the benefit of creating WebDriver type reference variable. In this post, we will answer all these questions in detail. But first of all let's see what is WebDriver.
+
+What is WebDriver?
+WebDriver is an interface provided by Selenium WebDriver. As we know that interfaces in Java are the collection of constants and abstract methods(methods without any implementation). The WebDriver interface serves as a contract that each browser specific implementation like ChromeDriver, FireFoxDriver must follow. The WebDriver interface declares methods like get(), navigate(), close(), sendKeys() etc. and the developers of the browser specific drivers implement these methods to get the stuff automated.
+Take for example the ChromeDriver, it is developed by the guys from Chromium team, the developers of the Selenium project don't have to worry about the implementation details of these drivers.
+
+
+Is this correct - WebDriver driver = new WebDriver();?
+No, the above statement is incorrect as WebDriver is an interface and in java we cannot instantiate an interface. Also, logically speaking, saying we want to launch WebDriver doesn't make any sense as we haven't specified any particualr browser that needs to be launched.
+
+
+Is this correct - FirefoxDriver driver = new FirefoxDriver();?
+Yes, it is perfectly correct. FirefoxDriver is an implementing class of WebDriver interface and the above statement will launch the Chrome browser.
+Now, the question arises, why do we need to create reference variable of type WebDriver?
+
+
+Benefit of WebDriver driver = new FirefoxDriver();
+Having a reference variable of type WebDriver allows us to assign the driver object to different browser specific drivers. Thus allowing multi-browser testing by assigning the driver object to any of the desired browser.
+
+===========================================================================================================================
+In Selenium , WebDriver is a interface.
+
+FirefoxDriver is a class. It implements all the methods of WebDriver interface.
+
+If you use: WebDriver driver = new WebDriver(); // You can’t do this because you can’t make object of interface.
+
+If you use: WebDriver driver = new FirefoxDriver(); // You can make reference of interface and make object of FirfoxDriver. In this case you can call implemented methods of WebDriver interface.
+
+If you use: FirefoxDriver driver = new FirefoxDriver(); // You can’t call/use methods of WebDriver interface.
+
+
+
