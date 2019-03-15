@@ -28,9 +28,9 @@ public class SwitchWindow {
 		Set<String> AllWN = driver.getWindowHandles();
 		System.out.println("All window name:- "+ AllWN);
 		System.out.println("===================================================================");
-		
+				
 		//Part 4 - Using the For Loop i am going to switch between the windows that are opened currently
-		
+				
 		for(String SW : driver.getWindowHandles()) { //sw holds 2 data sw1 - main window sw2-new window
 			
 			driver.switchTo().window(SW); // sw2 and ur switching to sw1
@@ -42,8 +42,6 @@ public class SwitchWindow {
 			Thread.sleep(6000);
 			
 		}
-	
-		driver.close();
+		driver.quit();
 	}
-
 }

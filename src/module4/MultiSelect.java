@@ -20,8 +20,7 @@ public class MultiSelect {
 		driver.get(
 				"https://seleniumautomationpractice.blogspot.com/2017/10/functionisogramigoogleanalyticsobjectri.html");
 
-		driver.findElement(By.id("tool-2")).click();
-		
+			
 		//3 Inntialize the Select class and focus on the element on which you are goin to interact with
 		Select oSelect = new Select(driver.findElement(By.name("selenium_commands")));
 		
@@ -46,24 +45,25 @@ public class MultiSelect {
 		
 		for(int i = 0; i<oListSize; i++) {
 			
+			//to get the text of the options available
 			String oValue = oList.get(i).getText();
 			
 			System.out.println(oValue);
 			
 			Thread.sleep(5000);
 			
+			//to select the option
 			oSelect.selectByIndex(i);
 			
 			Thread.sleep(5000);
 			
+			//to deselect the previously selected option
 			oSelect.deselectByIndex(i);
 			
 			Thread.sleep(5000);
 			
 		}
-
 		//oSelect.deselectAll();
-		
 	}
 
 }

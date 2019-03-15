@@ -7,6 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
 public class KeyboardMouse {
@@ -22,15 +23,17 @@ public class KeyboardMouse {
 		
 		WebElement Fname = driver.findElement(By.name("firstname"));
 		
-		Actions act = new Actions(driver);
+		Actions steps = new Actions(driver);
 		
-		act
-			.moveToElement(Fname)
-			.keyDown(Fname, Keys.SHIFT)
-			.sendKeys(Fname, "abhresh")
-			.keyUp(Fname, Keys.SHIFT)
-			.doubleClick(Fname)
-			.contextClick(Fname)
-			.perform();		
+		Action actINF = steps.moveToElement(Fname)
+				.keyDown(Fname, Keys.SHIFT)
+				.sendKeys("abhresh")
+				.keyUp(Fname, Keys.SHIFT)
+				.doubleClick(Fname)
+				.contextClick(Fname)
+				.build();
+		actINF.perform();
+		
+		
 	}
 }
