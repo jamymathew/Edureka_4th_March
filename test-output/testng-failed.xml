@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Parameterization]" parallel="tests">
-  <test thread-count="5" name="IE(failed)" parallel="tests">
-    <parameter name="B" value="IE"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="module6.Scenario3">
+      <class name="module9.DDT">
         <methods>
-          <include name="login_TestCase"/>
-          <include name="openBrowser"/>
-          <include name="closeBrowser"/>
+          <include name="TestAUT"/>
+          <include name="CloseBrowser"/>
+          <include name="OpenAUT"/>
         </methods>
-      </class> <!-- module6.Scenario3 -->
+      </class> <!-- module9.DDT -->
     </classes>
-  </test> <!-- IE(failed) -->
-  <test thread-count="5" name="Firefox(failed)" parallel="tests">
-    <parameter name="B" value="Firefox"/>
-    <classes>
-      <class name="module6.Scenario3">
-        <methods>
-          <include name="login_TestCase"/>
-          <include name="openBrowser"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- module6.Scenario3 -->
-    </classes>
-  </test> <!-- Firefox(failed) -->
-</suite> <!-- Failed suite [Parameterization] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

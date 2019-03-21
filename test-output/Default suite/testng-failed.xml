@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="module6.TestNG">
+      <class name="module9.DDT">
         <methods>
+          <include name="TestAUT"/>
           <include name="CloseBrowser"/>
-          <include name="Logout"/>
+          <include name="OpenAUT"/>
         </methods>
-      </class> <!-- module6.TestNG -->
+      </class> <!-- module9.DDT -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
