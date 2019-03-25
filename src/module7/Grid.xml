@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Main Test Suite" parallel="tests">
+    <test name="TestNG Grid">
+        <classes>
+        <class name="module7.GridExampleTest"/>
+        </classes>
+    </test>
+    <test name="TestNG Grid1">
+        <classes>
+        <class name="module7.GridExampleTest"/>
+        </classes>
+    </test>
+
+</suite>
